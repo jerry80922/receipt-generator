@@ -87,7 +87,7 @@ namespace InvoiceAssignNumber
                     queryData = CnOrd.QueryData("電子發票配號", "流水序號");
                     if (queryData != "")
                     {
-                        var result = MessageBox.Show("已有發票配號/n是否要刪除舊資料?", "", MessageBoxButtons.OKCancel);
+                        var result = MessageBox.Show("已有發票配號\n是否要刪除舊資料?", "", MessageBoxButtons.OKCancel);
                         if (result == DialogResult.OK)
                         {
                             CnOrd.DeleteData("電子發票配號");
