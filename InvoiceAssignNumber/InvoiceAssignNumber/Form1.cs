@@ -23,6 +23,7 @@ namespace InvoiceAssignNumber
             INIFile loadINI = new INIFile();
             string strINI, strShopCode, strTerminalCode;
             strINI = "D:\\xposTGNet\\PRSET.ini";
+            txtDBLoc.Text = "D:\\xposTGNet\\SBX.mdb";
             btnQuickSetting.Select();
 
             if (System.IO.File.Exists(strINI))
@@ -56,7 +57,7 @@ namespace InvoiceAssignNumber
         /// <param name="e"></param>
         private void BtnQuickSetting_Click(object sender, EventArgs e)
         {
-            string strPath = "D:\\xposTGNet\\SBX.mdb";
+            string strPath = txtDBLoc.Text;
             string queryData = "";
             bool bln = false;
             List<string> colName = new List<string>();
@@ -95,8 +96,23 @@ namespace InvoiceAssignNumber
                             CnOrd.CloseDB();
                             CnOrd.Dispose();
 
-                            bln = true;
-                            MessageBox.Show("設定完成\n按下確認後，自動開啟POS程式");
+                            DialogResult dr = MessageBox.Show("設定完成\n按下確認後，自動開啟POS程式", "提示", MessageBoxButtons.OKCancel);
+                            if (dr == DialogResult.OK)
+                            {
+                                try
+                                {
+                                    //開啟POS程式
+                                    System.Diagnostics.Process.Start("D:\\xposTGNet\\xposTGNet.exe");
+                                }
+                                catch (Exception ex)
+                                {
+                                    MessageBox.Show("開啟POS失敗\n" + ex.ToString());
+                                }
+                                finally
+                                {
+                                    Application.Exit();
+                                }
+                            }
                         }
                         else
                         {
@@ -109,31 +125,28 @@ namespace InvoiceAssignNumber
                         CnOrd.CloseDB();
                         CnOrd.Dispose();
 
-                        bln = true;
-                        MessageBox.Show("設定完成\n按下確認後，自動開啟POS程式");
+                        DialogResult dr = MessageBox.Show("設定完成\n按下確認後，自動開啟POS程式","提示", MessageBoxButtons.OKCancel);
+                        if(dr == DialogResult.OK)
+                        {
+                            try
+                            {
+                                //開啟POS程式
+                                System.Diagnostics.Process.Start("D:\\xposTGNet\\xposTGNet.exe");
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show("開啟POS失敗\n" + ex.ToString());
+                            }
+                            finally
+                            {
+                                Application.Exit();
+                            }
+                        }
                     }
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("設定失敗\n" + ex.ToString());
-                }
-
-                //電子發票設定成功
-                if (bln == true)
-                {
-                    try
-                    {
-                        //開啟POS程式
-                        System.Diagnostics.Process.Start("D:\\xposTGNet\\xposTGNet.exe");
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("開啟POS失敗\n" + ex.ToString());
-                    }
-                    finally
-                    {
-                        Application.Exit();
-                    }
                 }
             }
             else
@@ -234,9 +247,8 @@ namespace InvoiceAssignNumber
             //判斷輸入的字軌是否有10碼
             if (txtLengh1 == 10 && txtLengh2 == 10)
             {
-                string strPath = "D:\\xposTGNet\\SBX.mdb";
+                string strPath = txtDBLoc.Text;
                 string queryData = "";
-                bool bln = false;
                 List<string> colName = new List<string>();
                 List<string> rowValuse = new List<string>();
 
@@ -276,8 +288,23 @@ namespace InvoiceAssignNumber
                                 CnOrd.CloseDB();
                                 CnOrd.Dispose();
 
-                                bln = true;
-                                MessageBox.Show("設定完成\n按下確認後，自動開啟POS程式");
+                                DialogResult dr = MessageBox.Show("設定完成\n按下確認後，自動開啟POS程式", "提示", MessageBoxButtons.OKCancel);
+                                if (dr == DialogResult.OK)
+                                {
+                                    try
+                                    {
+                                        //開啟POS程式
+                                        System.Diagnostics.Process.Start("D:\\xposTGNet\\xposTGNet.exe");
+                                    }
+                                    catch (Exception ex)
+                                    {
+                                        MessageBox.Show("開啟POS失敗\n" + ex.ToString());
+                                    }
+                                    finally
+                                    {
+                                        Application.Exit();
+                                    }
+                                }
                             }
                             else
                             {
@@ -290,31 +317,28 @@ namespace InvoiceAssignNumber
                             CnOrd.CloseDB();
                             CnOrd.Dispose();
 
-                            bln = true;
-                            MessageBox.Show("設定完成\n按下確認後，自動開啟POS程式");
+                            DialogResult dr = MessageBox.Show("設定完成\n按下確認後，自動開啟POS程式", "提示", MessageBoxButtons.OKCancel);
+                            if (dr == DialogResult.OK)
+                            {
+                                try
+                                {
+                                    //開啟POS程式
+                                    System.Diagnostics.Process.Start("D:\\xposTGNet\\xposTGNet.exe");
+                                }
+                                catch (Exception ex)
+                                {
+                                    MessageBox.Show("開啟POS失敗\n" + ex.ToString());
+                                }
+                                finally
+                                {
+                                    Application.Exit();
+                                }
+                            }
                         }
                     }
                     catch (Exception ex)
                     {
                         MessageBox.Show("設定失敗\n" + ex.ToString());
-                    }
-
-                    //電子發票設定成功
-                    if (bln == true)
-                    {
-                        try
-                        {
-                            //開啟POS程式
-                            System.Diagnostics.Process.Start("D:\\xposTGNet\\xposTGNet.exe");
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("開啟POS失敗\n" + ex.ToString());
-                        }
-                        finally
-                        {
-                            Application.Exit();
-                        }
                     }
                 }
                 else

@@ -43,6 +43,8 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.BtnSetting = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtDBLoc = new System.Windows.Forms.TextBox();
             label2 = new System.Windows.Forms.Label();
             label3 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
@@ -76,7 +78,7 @@
             // 
             this.shopcode.AutoSize = true;
             this.shopcode.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.shopcode.Location = new System.Drawing.Point(73, 24);
+            this.shopcode.Location = new System.Drawing.Point(31, 24);
             this.shopcode.Name = "shopcode";
             this.shopcode.Size = new System.Drawing.Size(77, 20);
             this.shopcode.TabIndex = 0;
@@ -86,7 +88,7 @@
             // 
             this.terminalcode.AutoSize = true;
             this.terminalcode.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.terminalcode.Location = new System.Drawing.Point(73, 63);
+            this.terminalcode.Location = new System.Drawing.Point(31, 63);
             this.terminalcode.Name = "terminalcode";
             this.terminalcode.Size = new System.Drawing.Size(77, 20);
             this.terminalcode.TabIndex = 1;
@@ -106,7 +108,7 @@
             // 
             this.txtShopCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtShopCode.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtShopCode.Location = new System.Drawing.Point(156, 22);
+            this.txtShopCode.Location = new System.Drawing.Point(111, 22);
             this.txtShopCode.MaxLength = 6;
             this.txtShopCode.Name = "txtShopCode";
             this.txtShopCode.ReadOnly = true;
@@ -118,7 +120,7 @@
             // 
             this.txtTerminalCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTerminalCode.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtTerminalCode.Location = new System.Drawing.Point(156, 57);
+            this.txtTerminalCode.Location = new System.Drawing.Point(111, 57);
             this.txtTerminalCode.MaxLength = 1;
             this.txtTerminalCode.Name = "txtTerminalCode";
             this.txtTerminalCode.ReadOnly = true;
@@ -174,7 +176,7 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.tabControl1.Location = new System.Drawing.Point(28, 112);
+            this.tabControl1.Location = new System.Drawing.Point(21, 131);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(282, 201);
@@ -220,12 +222,32 @@
             this.BtnSetting.UseVisualStyleBackColor = true;
             this.BtnSetting.Click += new System.EventHandler(this.BtnSetting_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label4.Location = new System.Drawing.Point(31, 94);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(79, 20);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "DB位置：";
+            // 
+            // txtDBLoc
+            // 
+            this.txtDBLoc.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtDBLoc.Location = new System.Drawing.Point(111, 93);
+            this.txtDBLoc.Name = "txtDBLoc";
+            this.txtDBLoc.Size = new System.Drawing.Size(192, 23);
+            this.txtDBLoc.TabIndex = 11;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(338, 332);
+            this.ClientSize = new System.Drawing.Size(338, 345);
+            this.Controls.Add(this.txtDBLoc);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.txtTerminalCode);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.txtShopCode);
@@ -259,6 +281,8 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button BtnSetting;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtDBLoc;
     }
 }
 
