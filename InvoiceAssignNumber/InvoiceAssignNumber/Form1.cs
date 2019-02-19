@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.IO;
 
 namespace InvoiceAssignNumber
 {
@@ -349,6 +350,18 @@ namespace InvoiceAssignNumber
             else
             {
                 MessageBox.Show("字軌輸入錯誤\n範例:XX00000001");
+            }
+        }
+
+        private void BtnLoc_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog file = new OpenFileDialog();
+            string strPath;
+
+            if (file.ShowDialog() == DialogResult.OK)
+            {
+                strPath = file.FileName;
+                txtDBLoc.Text = Path.GetFullPath(strPath);
             }
         }
     }
