@@ -112,7 +112,6 @@
             this.txtShopCode.Location = new System.Drawing.Point(98, 22);
             this.txtShopCode.MaxLength = 6;
             this.txtShopCode.Name = "txtShopCode";
-            this.txtShopCode.ReadOnly = true;
             this.txtShopCode.Size = new System.Drawing.Size(117, 29);
             this.txtShopCode.TabIndex = 3;
             this.txtShopCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -124,7 +123,6 @@
             this.txtTerminalCode.Location = new System.Drawing.Point(98, 57);
             this.txtTerminalCode.MaxLength = 1;
             this.txtTerminalCode.Name = "txtTerminalCode";
-            this.txtTerminalCode.ReadOnly = true;
             this.txtTerminalCode.Size = new System.Drawing.Size(117, 29);
             this.txtTerminalCode.TabIndex = 4;
             this.txtTerminalCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;

@@ -227,7 +227,7 @@ namespace InvoiceAssignNumber
             }
             values.Add("1");
             values.Add("0");
-            values.Add("1");
+            values.Add("0");
             values.Add("Y");
 
             return values;
